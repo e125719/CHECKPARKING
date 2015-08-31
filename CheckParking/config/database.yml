@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password:
+  username: railsUser
+  password: mypassword
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: CheckParking_development
+  database: CheckParking_db
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
