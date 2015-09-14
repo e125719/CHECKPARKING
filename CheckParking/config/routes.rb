@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :car_infos
   resources :top
 
   resources :car_number_db
