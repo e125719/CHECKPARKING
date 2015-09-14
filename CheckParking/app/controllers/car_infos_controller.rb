@@ -4,7 +4,8 @@ class CarInfosController < ApplicationController
   # GET /car_infos
   # GET /car_infos.json
   def index
-    @car_infos = CarInfo.all
+    @search = CarInfo.search(params[:q])
+    @car_infos = @search.result(distinct: true)
   end
 
   # GET /car_infos/1
