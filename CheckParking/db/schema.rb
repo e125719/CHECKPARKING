@@ -11,19 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902092932) do
+ActiveRecord::Schema.define(version: 20150914054813) do
 
-  create_table "car_numbers", force: :cascade do |t|
-    t.integer  "car_num",    limit: 4
-    t.string   "owner_name", limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "owner_infos", force: :cascade do |t|
-    t.string   "owner_name", limit: 255
-    t.string   "owner_dep",  limit: 255
-    t.string   "owner_attr", limit: 255
+  create_table "car_infos", force: :cascade do |t|
+    t.integer  "number",     limit: 4
+    t.string   "owner",      limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
