@@ -2,6 +2,10 @@
 
 <h1>Listing Car Infos</h1>
 
+<%= link_to '新規登録', new_car_info_path %><br>
+
+<br>
+
 <%= search_form_for @search do |f| %>
   <%= f.label :number_eq, 'number' %>
   <%= f.text_field :number_eq %>
@@ -9,6 +13,8 @@
   <%= f.text_field :owner_cont %>
   <%= f.submit 'Search' %>
 <% end %>
+
+<hr>
 
 <table>
   <thead>
@@ -34,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Car info', new_car_info_path %>
+<%= link_to 'TOP', top_index_path %>
